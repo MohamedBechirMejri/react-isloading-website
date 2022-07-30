@@ -16,6 +16,12 @@ const App = () => {
   return (
     <div className="min-h-screen w-screen bg-slate-100">
       <Toaster />
+      <h1 className="w-full text-center p-8 text-3xl font-bold">
+        react-isloading
+      </h1>
+      <p className="w-full text-center text-xl font-bold">
+        Beautiful & Easy to add Loaders for React
+      </p>
       <div
         className={` flex flex-col items-center justify-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 bg-[#011627] rounded-2xl p-8 border border-black font-bold text-lg gap-4 ${
           isCodeVisible ? "animate-reveal" : "animate-hide"
@@ -93,7 +99,7 @@ const App = () => {
             i < currentPage && (
               <div
                 key={i}
-                className="flex flex-col items-center justify-center cursor-pointer hover:bg-slate-100 transition-all rounded-xl"
+                className="flex flex-col items-center justify-center cursor-pointer hover:bg-slate-100 transition-all rounded-xl animate-revealPage"
                 onClick={() => {
                   setName(name);
                   setCodeVisible(true);
