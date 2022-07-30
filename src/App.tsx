@@ -14,7 +14,11 @@ const App = () => {
 
   return (
     <div className="min-h-screen w-screen">
-      <div className=" flex flex-col items-center justify-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 bg-slate-400 rounded-2xl p-8 border border-black font-bold text-lg gap-4">
+      <div
+        className={` flex flex-col items-center justify-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 bg-slate-400 rounded-2xl p-8 border border-black font-bold text-lg gap-4 ${
+          isCodeVisible ? "animate-reveal" : "animate-hide"
+        }`}
+      >
         <button
           className="absolute top-2 right-6 text-white hover:bg-[#ffffff33]  transition-all px-2 rounded-full"
           onClick={() => setCodeVisible(false)}
@@ -41,16 +45,15 @@ const App = () => {
           <div
             key={i}
             className="flex flex-col items-center justify-center"
-            onClick={() => setName(name)}
+            onClick={() => {
+              setName(name);
+              setCodeVisible(true);
+            }}
           >
             <Loader
               style={{
                 height: "100%",
                 width: "100%",
-                // position: "absolute",
-                // top: "50%",
-                // left: "50%",
-                // transform: "translate(-50%, -50%)",
               }}
             />
           </div>
