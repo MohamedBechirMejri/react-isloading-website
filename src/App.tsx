@@ -464,24 +464,28 @@ const App = () => {
           </code>
         </pre>
       </div>
-      <div className="grid grid-cols-9 p-8 gap-4">
-        {loaders.map(({ name, Loader }, i) => (
-          <div
-            key={i}
-            className="flex flex-col items-center justify-center cursor-pointer hover:bg-slate-300 transition-all rounded-xl"
-            onClick={() => {
-              setName(name);
-              setCodeVisible(true);
-            }}
-          >
-            <Loader
-              style={{
-                height: "100%",
-                width: "100%",
-              }}
-            />
-          </div>
-        ))}
+      <div className="grid grid-cols-5 p-8 gap-4">
+        {loaders.map(({ name, Loader }, i) => {
+          return (
+            i < 20 && (
+              <div
+                key={i}
+                className="flex flex-col items-center justify-center cursor-pointer hover:bg-slate-300 transition-all rounded-xl"
+                onClick={() => {
+                  setName(name);
+                  setCodeVisible(true);
+                }}
+              >
+                <Loader
+                  style={{
+                    height: "100%",
+                    width: "100%",
+                  }}
+                />
+              </div>
+            )
+          );
+        })}
       </div>
     </div>
   );
