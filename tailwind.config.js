@@ -60,9 +60,12 @@ module.exports = {
             opacity: 1,
             transform: "translate(-50%, -55%)",
           },
-          "100%": {
+          "99%": {
             opacity: 0,
             transform: "translate(-50%, -30%)",
+          },
+          "100%": {
+            transform: "translate(-50%, 70000%)",
           },
         },
       },
