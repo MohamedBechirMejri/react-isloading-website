@@ -405,9 +405,16 @@ const loaders = [
   },
 ];
 
+const pages: number[] = [];
+
+for (let index = 0; index < Math.ceil(loaders.length / 15); index++) {
+  pages.push(index + 1);
+}
+
 const App = () => {
   const [name, setName] = React.useState("L1");
   const [isCodeVisible, setCodeVisible] = React.useState(false);
+  const [currentPage, setCurrentPage] = React.useState(1 * 15);
 
   return (
     <div className="min-h-screen w-screen">
@@ -464,10 +471,11 @@ const App = () => {
           </code>
         </pre>
       </div>
-      <div className="grid grid-cols-5 p-8 gap-4">
+      <div className="grid grid-cols-3 p-8 gap-4">
         {loaders.map(({ name, Loader }, i) => {
           return (
-            i < 20 && (
+            i >= currentPage - 15 &&
+            i < currentPage && (
               <div
                 key={i}
                 className="flex flex-col items-center justify-center cursor-pointer hover:bg-slate-300 transition-all rounded-xl"
@@ -484,6 +492,21 @@ const App = () => {
                 />
               </div>
             )
+          );
+        })}
+      </div>
+      <div>
+        {pages.map((page, i) => {
+          return (
+            <div
+              key={i}
+              className="flex flex-col items-center justify-center cursor-pointer hover:bg-slate-300 transition-all rounded-xl"
+              onClick={() => {
+                setCurrentPage(page * 15);
+              }}
+            >
+              {page}
+            </div>
           );
         })}
       </div>
