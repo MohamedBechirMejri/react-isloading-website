@@ -30,16 +30,16 @@ module.exports = {
             transform: "translate(-50%, -50%)",
           },
         },
-        // revealPage: {
-        //   "0%": {
-        //     opacity: 0,
-        //     transform: "translate(0, 10%)",
-        //   },
-        //   "100%": {
-        //     opacity: 1,
-        //     transform: "translate(0, 0)",
-        //   },
-        // },
+        revealPage: {
+          "0%": {
+            opacity: 0,
+            transform: "translate(0, 10%)",
+          },
+          "100%": {
+            opacity: 1,
+            transform: "translate(0, 0)",
+          },
+        },
         // revealLogo: {
         //   "0%": {
         //     opacity: 0,
