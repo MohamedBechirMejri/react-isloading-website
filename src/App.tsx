@@ -30,7 +30,103 @@ const loaders = [
   {
     name: "L7",
     Loader: L.L7,
-  }
+  },
+  {
+    name: "L8",
+    Loader: L.L8,
+  },
+  {
+    name: "L9",
+    Loader: L.L9,
+  },
+  {
+    name: "L10",
+    Loader: L.L10,
+  },
+  {
+    name: "L11",
+    Loader: L.L11,
+  },
+  {
+    name: "L12",
+    Loader: L.L12,
+  },
+  {
+    name: "L13",
+    Loader: L.L13,
+  },
+  {
+    name: "L14",
+    Loader: L.L14,
+  },
+  {
+    name: "L15",
+    Loader: L.L15,
+  },
+  {
+    name: "L16",
+    Loader: L.L16,
+  },
+  {
+    name: "L17",
+    Loader: L.L17,
+  },
+  {
+    name: "L18",
+    Loader: L.L18,
+  },
+  {
+    name: "L19",
+    Loader: L.L19,
+  },
+  {
+    name: "L20",
+    Loader: L.L20,
+  },
+  {
+    name: "L21",
+    Loader: L.L21,
+  },
+  {
+    name: "L22",
+    Loader: L.L22,
+  },
+  {
+    name: "L23",
+    Loader: L.L23,
+  },
+  {
+    name: "L24",
+    Loader: L.L24,
+  },
+  {
+    name: "L25",
+    Loader: L.L25,
+  },
+  {
+    name: "L26",
+    Loader: L.L26,
+  },
+  {
+    name: "L27",
+    Loader: L.L27,
+  },
+  {
+    name: "L28",
+    Loader: L.L28,
+  },
+  {
+    name: "L29",
+    Loader: L.L29,
+  },
+  {
+    name: "L30",
+    Loader: L.L30,
+  },
+  {
+    name: "L31",
+    Loader: L.L31,
+  },
 ];
 
 const App = () => {
