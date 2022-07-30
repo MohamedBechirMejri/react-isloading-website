@@ -7,6 +7,10 @@ const loaders = [
     name: "L1",
     Loader: L.L1,
   },
+  {
+    name: "L2",
+    Loader: L.L2,
+  },
 ];
 
 const App = () => {
