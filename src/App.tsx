@@ -115,7 +115,9 @@ const App = () => {
           return (
             <div
               key={i}
-              className="flex flex-col items-center justify-center cursor-pointer hover:bg-slate-100 transition-all rounded-xl p-2"
+              className={`flex flex-col items-center justify-center cursor-pointer hover:bg-slate-200 transition-all rounded-xl p-2 px-4 hover:text-slate-600 ${
+                currentPage / 15 === page ? "bg-slate-200" : ""
+              }`}
               onClick={() => {
                 setCurrentPage(page * 15);
               }}
