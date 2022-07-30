@@ -68,11 +68,11 @@ const App = () => {
           </code>
         </pre>
       </div>
-      <div className="grid grid-cols-10">
+      <div className="grid grid-cols-9 p-8 gap-4">
         {loaders.map(({ name, Loader }, i) => (
           <div
             key={i}
-            className="flex flex-col items-center justify-center"
+            className="flex flex-col items-center justify-center cursor-pointer hover:bg-slate-300 transition-all rounded-xl"
             onClick={() => {
               setName(name);
               setCodeVisible(true);
