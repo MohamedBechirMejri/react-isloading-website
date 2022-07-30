@@ -25,18 +25,42 @@ const App = () => {
         >
           x
         </button>
-        <code className=" hover:bg-slate-300 p-4 rounded-2xl text-white w-full transition-all cursor-pointer">{`import { ${name} } from "react-isloading";`}</code>
-        <pre className=" hover:bg-slate-300 p-4 rounded-2xl text-white w-full transition-all cursor-pointer">
+        <code
+          className=" hover:bg-slate-300 p-4 rounded-2xl text-white w-full transition-all cursor-pointer"
+          onClick={e => {
+            navigator.clipboard.writeText(
+              `import { ${name} } from "react-isloading";`
+            );
+          }}
+        >{`import { ${name} } from "react-isloading";`}</code>
+        <pre
+          className=" hover:bg-slate-300 p-4 rounded-2xl text-white w-full transition-all cursor-pointer"
+          onClick={e => {
+            navigator.clipboard.writeText(
+              `      <${name}
+        style={{
+          height: "15rem",
+          width: "15rem",
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+        }}
+      />`
+            );
+          }}
+        >
           <code>
-            {`<${name} style={{
-        height: "15rem",
-        width: "15rem",
-        position: "absolute",
-        top: "50%",
-        left: "50%",
-        transform: "translate(-50%, -50%)",
-    }}
-/>`}
+            {`      <${name}
+        style={{
+          height: "15rem",
+          width: "15rem",
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+        }}
+      />`}
           </code>
         </pre>
       </div>
