@@ -14,21 +14,36 @@ const App = () => {
   const [currentPage, setCurrentPage] = React.useState(1 * 15);
 
   return (
-    <div className="min-h-screen w-screen">
+    <div className="min-h-screen w-screen bg-slate-100">
       <Toaster />
       <div
-        className={` flex flex-col items-center justify-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 bg-slate-400 rounded-2xl p-8 border border-black font-bold text-lg gap-4 ${
+        className={` flex flex-col items-center justify-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 bg-[#011627] rounded-2xl p-8 border border-black font-bold text-lg gap-4 ${
           isCodeVisible ? "animate-reveal" : "animate-hide"
         }`}
       >
         <button
-          className="absolute top-2 right-6 text-white hover:bg-[#ffffff33]  transition-all px-2 rounded-full"
+          className="absolute top-1 right-2 text-white hover:bg-[#ffffff33]  transition-all px-3 rounded-full pb-1"
           onClick={() => setCodeVisible(false)}
         >
           x
         </button>
+        <h2 className="bg-white text-xl p-2">First install the package</h2>
         <code
-          className=" hover:bg-slate-300 p-4 rounded-2xl text-white w-full transition-all cursor-pointer"
+          className=" hover:bg-slate-300 p-4 rounded-2xl text-white hover:text-[#011627] w-full transition-all cursor-pointer"
+          onClick={e => {
+            navigator.clipboard.writeText(
+              `import { ${name} } from "react-isloading";`
+            );
+            toast("Copied to Clipboard!.");
+          }}
+        >
+          {">"} npm i react-isloading
+        </code>
+        <h2 className="bg-white text-xl p-2">
+          then import the desired loader/s
+        </h2>
+        <code
+          className=" hover:bg-slate-300 p-4 rounded-2xl text-white hover:text-[#011627]  w-full transition-all cursor-pointer"
           onClick={e => {
             navigator.clipboard.writeText(
               `import { ${name} } from "react-isloading";`
@@ -36,8 +51,11 @@ const App = () => {
             toast("Copied to Clipboard!.");
           }}
         >{`import { ${name} } from "react-isloading";`}</code>
+        <h2 className="bg-white text-xl p-2">
+          Finally add the loader/s to your component
+        </h2>
         <pre
-          className=" hover:bg-slate-300 p-4 rounded-2xl text-white w-full transition-all cursor-pointer"
+          className=" hover:bg-slate-300 p-4 rounded-2xl text-white hover:text-[#011627]  w-full transition-all cursor-pointer"
           onClick={e => {
             navigator.clipboard.writeText(
               `      <${name}
@@ -75,7 +93,7 @@ const App = () => {
             i < currentPage && (
               <div
                 key={i}
-                className="flex flex-col items-center justify-center cursor-pointer hover:bg-slate-300 transition-all rounded-xl"
+                className="flex flex-col items-center justify-center cursor-pointer hover:bg-slate-100 transition-all rounded-xl"
                 onClick={() => {
                   setName(name);
                   setCodeVisible(true);
@@ -83,8 +101,8 @@ const App = () => {
               >
                 <Loader
                   style={{
-                    height: "100%",
-                    width: "100%",
+                    height: "10rem",
+                    width: "10rem",
                   }}
                 />
               </div>
@@ -92,12 +110,12 @@ const App = () => {
           );
         })}
       </div>
-      <div>
+      <div className="flex items-center justify-center gap-8 p-8 text-xl font-bold">
         {pages.map((page, i) => {
           return (
             <div
               key={i}
-              className="flex flex-col items-center justify-center cursor-pointer hover:bg-slate-300 transition-all rounded-xl"
+              className="flex flex-col items-center justify-center cursor-pointer hover:bg-slate-100 transition-all rounded-xl p-2"
               onClick={() => {
                 setCurrentPage(page * 15);
               }}
