@@ -10,10 +10,17 @@ const loaders = [
 
 const App = () => {
   const [name, setName] = React.useState("L1");
+  const [isCodeVisible, setCodeVisible] = React.useState(false);
 
   return (
     <div className="min-h-screen w-screen">
       <div className=" flex flex-col items-center justify-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 bg-slate-400 rounded-2xl p-8 border border-black font-bold text-lg gap-4">
+        <button
+          className="absolute top-2 right-6 text-white hover:bg-[#ffffff33]  transition-all px-2 rounded-full"
+          onClick={() => setCodeVisible(false)}
+        >
+          x
+        </button>
         <code className=" hover:bg-slate-300 p-4 rounded-2xl text-white w-full transition-all cursor-pointer">{`import { ${name} } from "react-isloading";`}</code>
         <pre className=" hover:bg-slate-300 p-4 rounded-2xl text-white w-full transition-all cursor-pointer">
           <code>
