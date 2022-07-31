@@ -14,7 +14,7 @@ const App = () => {
   const [currentPage, setCurrentPage] = React.useState(1 * 15);
 
   return (
-    <div className="min-h-screen w-screen bg-slate-100">
+    <div className="min-h-screen w-screen bg-slate-100 pb-32">
       <Toaster />
       <h1 className="w-full text-center p-8 text-3xl font-bold">
         react-isloading
@@ -116,7 +116,7 @@ const App = () => {
           );
         })}
       </div>
-      <div className="flex items-center justify-center gap-8 p-8 text-xl font-bold">
+      <div className="flex items-center justify-center gap-8 p-4 text-xl font-bold fixed bottom-4 left-1/2 -translate-x-1/2 bg-white rounded-xl">
         {pages.map((page, i) => {
           return (
             <div
