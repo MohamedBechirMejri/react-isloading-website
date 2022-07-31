@@ -21,7 +21,27 @@ const App = () => {
       </h1>
       <p className="w-full text-center text-xl font-bold">
         Beautiful & Easy to add Loaders for React
+        <br />
+        Created by{" "}
+        <a
+          href="https://mohamedbechirmejri.dev"
+          className="hover:underline transition-all text-green-500 text-lg"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Mohamed Bechir
+        </a>
+        <br />
+        <a
+          href="https://github.com/MohamedBechirMejri/react-isloading"
+          className="hover:underline transition-all text-blue-500 text-lg"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Source Code
+        </a>
       </p>
+
       <div
         className={` flex flex-col items-center justify-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 bg-[#011627] rounded-2xl p-8 border border-black font-bold text-lg gap-4 ${
           isCodeVisible ? "animate-reveal" : "animate-hide"
