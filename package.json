@@ -12,7 +12,7 @@
     "@types/react-dom": "^18.0.11",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-hot-toast": "^2.4.0",
+    "react-hot-toast": "^2.4.1",
     "react-isloading": "^1.0.6",
     "react-scripts": "5.0.1",
     "typescript": "^5.0.4",
